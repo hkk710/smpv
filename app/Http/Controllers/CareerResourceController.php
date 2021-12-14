@@ -35,16 +35,17 @@ class CareerResourceController extends Controller
      */
     public function store(Request $request)
     {
+        dd("here");
         $applicantDetails = $request->all();
-        if ($file = $request->file('file')) {
-            if ($file->move('pdf', $applicantDetails['email'] . 'pdf')) {
-                $career = new Career();
-                $career->name = $applicantDetails['name'];
-                $career->education = $applicantDetails['education'];
-                $career->email = $applicantDetails['email'];
-                $career->mobile = $applicantDetails['mobile'];
-                $career->description = $applicantDetails['description'];
-                $career->resume_path = $applicantDetails['email'] . 'pdf';
+        // if ($file = $request->file('file')) {
+            // if ($file->move('pdf', $applicantDetails['email'] . 'pdf')) {
+            //     $career = new Career();
+            //     $career->name = $applicantDetails['name'];
+            //     $career->education = $applicantDetails['education'];
+            //     $career->email = $applicantDetails['email'];
+            //     $career->mobile = $applicantDetails['mobile'];
+            //     $career->description = $applicantDetails['description'];
+                // $career->resume_path = $applicantDetails['email'] . 'pdf';
                 // $career->save();
 
                 $name = $applicantDetails['name'];
@@ -60,8 +61,8 @@ class CareerResourceController extends Controller
                     });
                         
                 return back()->with('success', 'Your application sent successfully!');
-            };
-        }
+        //     };
+        // }
         return back();
     }
 

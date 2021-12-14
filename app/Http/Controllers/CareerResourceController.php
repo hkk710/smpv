@@ -46,6 +46,19 @@ class CareerResourceController extends Controller
                 $career->description = $applicantDetails['description'];
                 $career->resume_path = $applicantDetails['email'] . 'pdf';
                 $career->save();
+
+                $name = $applicantDetails['name'];
+                $education = $applicantDetails['education'];
+                $email = $applicantDetails['email'];
+                $mobile = $applicantDetails['mobile'];
+                $description = $applicantDetails['description'];
+            
+            
+                    \Mail::send('partials.career.email', ['name' => $name, 'education' => $education, 'email' => $email, 'mobile' => $mobile, 'description' => $description], function ($message) {
+            
+                        $message->to('hkk710@gmail.com')->subject('Application');
+                    });
+                        
                 return back()->with('success', 'Your application sent successfully!');
             };
         }

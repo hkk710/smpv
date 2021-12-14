@@ -45,7 +45,7 @@ class CareerResourceController extends Controller
                 $career->mobile = $applicantDetails['mobile'];
                 $career->description = $applicantDetails['description'];
                 $career->resume_path = $applicantDetails['email'] . 'pdf';
-                $career->save();
+                // $career->save();
 
                 $name = $applicantDetails['name'];
                 $education = $applicantDetails['education'];

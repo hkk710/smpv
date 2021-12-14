@@ -42,7 +42,7 @@
                 @include('flash-message')
 
                 <div class="text-center"><button
-                        style="padding: 8px 25px;margin-left: 12px;border-radius: 4px;color: #fff;font-weight: 400;border: 2px solid #5c9f24;background: #5c9f24;"
+                        style="padding: 8px 25px;margin-left: 12px;border-radius: 4px;color: #fff;font-weight: 400;border: 2px solid #1b1464;background: #1b1464;"
                         type="submit">Apply</button></div>
             </form>
         </div>

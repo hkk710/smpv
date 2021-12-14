@@ -34,10 +34,6 @@
         @include('partials.team.index')
         <!-- End Team Section -->
 
-        <!-- ======= associates Section ======= -->
-        {{-- @include('partials.associates.index') --}}
-        <!-- End Associates Section -->
-
         {{-- insights section --}}
         @include('partials.insights.index')
         {{-- End insights Responsiblity --}}

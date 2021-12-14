@@ -27,12 +27,14 @@ Route::get('/test1', function () {
     return view('admin.test1.index');
 });
 
+// Route::group(['namespace' => '','middleware' => ['web', config('backpack.base.middleware_key', 'admin')],'prefix' => config('backpack.base.route_prefix', 'admin'),]
+// );
 Route::resources([
     'career' => CareerResourceController::class,
     'article' => ArticleResourceController::class,
     'statutory' => StatutoryResourceController::class,
 ]);
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('admin/dashboard/index');
-})->name('dashboard');
+// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+//     return view('admin/dashboard/index');
+// })->name('dashboard');

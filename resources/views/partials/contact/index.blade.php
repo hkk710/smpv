@@ -6,7 +6,7 @@
         <div class="row contact-info">
             <div class="col-md-6">
                 <div class="contact-address">
-                    <i class="bi bi-geo-alt"></i>
+                    <i class="bi bi-geo-alt-fill"></i>
                     <h3>Bengaluru Office</h3>
                     <address>No.106, 04th Cross, 02nd Block, Koramangala, Bengaluru – 560034, Karnataka, India
                     </address>
@@ -14,7 +14,7 @@
             </div>
             <div class="col-md-6">
                 <div class="contact-address">
-                    <i class="bi bi-geo-alt"></i>
+                    <i class="bi bi-geo-alt-fill"></i>
                     <h3>Kochi Office</h3>
                     <address>No. 11/715, Kundannoor Junction, NH 85 Kochi - Tondi Point, Maradu P O , Ernakulam,
                         Kerala -682304 India

@@ -26,79 +26,19 @@
                         <div class="section-title">
                             <h2>Articles</h2>
                         </div>
+                        
                         <div class="row">
+                            @foreach($articles as $article)
                             <div class="col-lg-4 mt-4 mt-lg-0">
-                                <a href="/article/id">
+                                <a href="/article/{!!@$article['id']!!}">
                                     <div class="box">
                                         <span><i class="bx bx-receipt"></i></span>
-                                        <h4>Article 1</h4>
+                                        <h4>{!!@$article['title']!!}</h4>
+                                        {!!@$article['id']!!}
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-lg-4 mt-4 mt-lg-0">
-                                <a href="/article/id">
-                                    <div class="box">
-                                        <span><i class="bx bx-receipt"></i></span>
-                                        <h4>Article 2</h4>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-4 mt-4 mt-lg-0">
-                                <a href="/article/id">
-                                    <div class="box">
-                                        <span><i class="bx bx-receipt"></i></span>
-                                        <h4>Article 3</h4>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-4 mt-4 mt-lg-0">
-                                <a href="/article/id">
-                                    <div class="box">
-                                        <span><i class="bx bx-receipt"></i></span>
-                                        <h4>Article 4</h4>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-4 mt-4 mt-lg-0">
-                                <a href="/article/id">
-                                    <div class="box">
-                                        <span><i class="bx bx-receipt"></i></span>
-                                        <h4>Article 5</h4>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-4 mt-4 mt-lg-0">
-                                <a href="/article/id">
-                                    <div class="box">
-                                        <span><i class="bx bx-receipt"></i></span>
-                                        <h4>Article 6</h4>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-4 mt-4 mt-lg-0">
-                                <a href="/article/id">
-                                    <div class="box">
-                                        <span><i class="bx bx-receipt"></i></span>
-                                        <h4>Article 7</h4>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-4 mt-4 mt-lg-0">
-                                <a href="/article/id">
-                                    <div class="box">
-                                        <span><i class="bx bx-receipt"></i></span>
-                                        <h4>Article 8</h4>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-4 mt-4 mt-lg-0">
-                                <a href="/article/id">
-                                    <div class="box">
-                                        <span><i class="bx bx-receipt"></i></span>
-                                        <h4>Article 9</h4>
-                                    </div>
-                                </a>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </section>

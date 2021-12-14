@@ -1,6 +1,6 @@
 <style>
     #company {
-        color: #5c9f24;
+        color: #1b1464;
         cursor: pointer;
         text-decoration: underline
     }
@@ -17,11 +17,13 @@
                     <div class="row">
                         <div class="col-md-12 icon-box">
                             <i class="bx bx-receipt"></i>
-                            {!!@$aboutus[1]['content']!!}
+                            <h4>Our Commitment</h4>
+                            {!!@$aboutus[2]['content']!!}
                         </div>
                         <div class="col-md-12 icon-box">
                             <i class="bx bx-images"></i>
-                            {!!@$aboutus[2]['content']!!}
+                            <h4>Our Ethos</h4>
+                            {!!@$aboutus[1]['content']!!}
                         </div>
                     </div>
                 </div>

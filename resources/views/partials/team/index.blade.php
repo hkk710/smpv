@@ -2,10 +2,10 @@
     <div class="container">
 
         <div class="section-title">
-            <h2>Team</h2>
-            <p><b>"The strength of the team is each individual member. The strength of each member is the team." – Phil
+            <h2>PEOPLE</h2>
+           <p style="text-align: center"><b>"The strength of the team is each individual member. The strength of each member is the team." – Phil
                     Jackson</b></p>
-            <p>It is the individual commitment to the group effort which makes team SMPV work. We have been successful
+            <p style="text-align: center">It is the individual commitment to the group effort which makes team SMPV work. We have been successful
                 because of our people, their commitment, expertise and ambition.
             </p>
         </div>
@@ -86,12 +86,20 @@
                 </div>
             </div>
         </div>
+        <div style="text-align: center;padding-top:10%">
+            <h3>Associates</h3>
+            <p style="text-align: center"><b>"None of us is as smart as all of us." - Ken Blanchard</b></p>
+            <p style="text-align: center">Extraordinary works invites extraordinary teams. We are aptly connected with our associates at different
+                cities. The seamless synergy that generates with our association is passed on to the clients in the form
+                of seamless services..</p>
+        </div>
     </div>
 </section>
 @include('partials.team.1')
 @include('partials.team.2')
 @include('partials.team.3')
 @include('partials.team.4')
+
 <script>
     function info(id) {
         $(id).modal('show')

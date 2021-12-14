@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Backpack\PageManager\app\Models\Page;
 
 class ArticleResourceController extends Controller
 {
@@ -13,7 +14,8 @@ class ArticleResourceController extends Controller
      */
     public function index()
     {
-        return view('article.index');
+        $articles = Page::where('name', 'Article')->get(['id', 'title', 'content']);
+        return view('article.index')->with(compact('articles'));
     }
 
     /**
@@ -45,7 +47,8 @@ class ArticleResourceController extends Controller
      */
     public function show($id)
     {
-        //
+        $article = Page::find($id);
+        return view('article.show')->with(compact('article'));
     }
 
     /**

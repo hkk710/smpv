@@ -10,7 +10,7 @@
                 <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                 <li><a class="nav-link scrollto" href="#about">About</a></li>
                 <li><a class="nav-link scrollto" href="#services">Services</a></li>
-                <li><a class="nav-link scrollto" href="#team">Team</a></li>
+                <li><a class="nav-link scrollto" href="#team">People</a></li>
                 {{-- <li><a class="nav-link scrollto" href="#faq">Associates</a></li> --}}
                 <li class="dropdown"><a href="#insights"><span>Insights</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>

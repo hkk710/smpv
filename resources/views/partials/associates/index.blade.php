@@ -2,14 +2,14 @@
     <div class="container">
 
         <div class="section-title">
-            <h2>Associates</h2>
-            <p><b>"None of us is as smart as all of us." - Ken Blanchard</b></p>
-            <p>Extraordinary works invites extraordinary teams. We are aptly connected with our associates at different
+            <h2 >Associates</h2>
+            <p style="text-align: center"><b>"None of us is as smart as all of us." - Ken Blanchard</b></p>
+            <p style="text-align: center">Extraordinary works invites extraordinary teams. We are aptly connected with our associates at different
                 cities. The seamless synergy that generates with our association is passed on to the clients in the form
                 of seamless services..</p>
         </div>
 
-        <div class="faq-list">
+        {{-- <div class="faq-list">
             <ul>
                 <li data-aos="fade-up">
                     <i class="bx bx-plus icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
@@ -67,7 +67,7 @@
                         their actions.</a>
                 </li>
             </ul>
-        </div>
+        </div> --}}
 
     </div>
 </section>

@@ -1,5 +1,6 @@
 <p>Name: {{ $name }}</p>
   <p>E-Mail: {{ $email }}</p>
-  <p>Subject: {{ $title }}</p>
+  <p>Education: {{ $education }}</p>
+  <p>Mobile: {{ $mobile }}</p>
   <p>Message: <br>
-  {{ $content }}</p>
+  {{ $description }}</p>

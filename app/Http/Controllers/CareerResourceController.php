@@ -35,7 +35,7 @@ class CareerResourceController extends Controller
      */
     public function store(Request $request)
     {
-        dd("here");
+        // dd("here");
         $applicantDetails = $request->all();
         // if ($file = $request->file('file')) {
             // if ($file->move('pdf', $applicantDetails['email'] . 'pdf')) {

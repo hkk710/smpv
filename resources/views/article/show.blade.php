@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    @include('partials.appinner')
 </head>
-<style>
-.articleouter{
-    background-color:beige;
-    padding:5%; 
-    text-align:justify;
-}
-.articleouter h3 ,h2, h1{
-    text-align: center;
-    font-family: "Roboto", sans-serif;
-}
-</style>
+
 <body>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="articleouter col-md-8">
-                <p>{!!@$article['content'] !!}</p>
+    <!-- ======= Header ======= -->
+    @include('partials.header')
+    <!-- End Header -->
+
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <ol>
+                        <li><a href="/">SMPV</a></li>
+                        <li><a href="/article">Articles</a></li>
+                        <li>{!!@$article['title']!!}</li>
+                    </ol>
+                </div>
+                <section id="why-us" class="why-us">
+                    <div class="container">
+                        <div class="section-title">
+                            <h2>{!!@$article['title']!!}</h2>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="articleouter col-md-8">
+                                    <p>{!!@$article['content'] !!}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </div>
-    </div>
+        </section><!-- End Breadcrumbs -->
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    @include('partials.footer')
+    <!-- End Footer -->
 </body>
+
 </html>
+

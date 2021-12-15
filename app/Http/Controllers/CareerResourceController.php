@@ -53,12 +53,13 @@ class CareerResourceController extends Controller
                 $email = $applicantDetails['email'];
                 $mobile = $applicantDetails['mobile'];
                 $description = $applicantDetails['description'];
-                $file = $applicantDetails['file'];            
+                $file = $request->file('file');       
             
                     \Mail::send('partials.career.email', ['name' => $name, 'education' => $education, 'email' => $email, 'mobile' => $mobile, 'description' => $description], function ($message) use($file){
             
-                        $message->to('hkk710@gmail.com')->subject('Application');
-                        $message->attach($file);
+                        $message->to('hkk710@gmail.com')->subject('Application')
+                        ->attach($file->getRealPath(),['as' => $file->getClientOriginalName(),'mime' => $file->getClientMimeType()]);
+                            
                     });
                         
                 return back()->with('success', 'Your application sent successfully!');

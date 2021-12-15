@@ -34,7 +34,6 @@
                                     <div class="box">
                                         <span><i class="bx bx-receipt"></i></span>
                                         <h4>{!!@$article['title']!!}</h4>
-                                        {!!@$article['id']!!}
                                     </div>
                                 </a>
                             </div>

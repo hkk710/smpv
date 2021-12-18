@@ -44,7 +44,6 @@ class WelcomePublicController extends Controller
             ['name', '=', 'SERVICES'],
             ['slug', '=', 'appearance-and-representation'],
         ])->get(['title', 'content']);
-
         $services = [
             'corporate_governance' => $corporate_governance,
             'business_contracts_and_agreements' => $business_contracts_and_agreements,
@@ -53,8 +52,8 @@ class WelcomePublicController extends Controller
             'audit_assurance_and_certification' => $audit_assurance_and_certification,
             'appearance_and_representation' => $appearance_and_representation
         ];
-
-        return view('welcome')->with(compact('aboutus','services'));
+        $social = Page::where('name', 'SOCIAL')->get(['title', 'content']);
+        return view('welcome')->with(compact('aboutus','services','social'));
     }
 
     /**

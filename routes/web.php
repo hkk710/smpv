@@ -42,7 +42,7 @@ Route::resources([
     'article' => ArticleResourceController::class,
     'statutory' => StatutoryResourceController::class,
 ]);
-Route::get('/{slug}', [WelcomePublicController::class, 'show']);
+// Route::get('/{slug}', [WelcomePublicController::class, 'show']);
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //     return view('admin/dashboard/index');
 // })->name('dashboard');

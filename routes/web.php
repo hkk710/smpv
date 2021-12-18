@@ -36,13 +36,13 @@ Route::get('/test1', function () {
     
 // );
 
-Route::get('/{slug}', [WelcomePublicController::class, 'show']);
+
 Route::resources([
     'career' => CareerResourceController::class,
     'article' => ArticleResourceController::class,
     'statutory' => StatutoryResourceController::class,
 ]);
-
+Route::get('/{slug}', [WelcomePublicController::class, 'show']);
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //     return view('admin/dashboard/index');
 // })->name('dashboard');

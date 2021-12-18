@@ -20,20 +20,20 @@ trait PageTemplates
     | - page slug
     */
 
-    // private function Content()
-    // {
-    //     $this->crud->addField([   // CustomHTML
-    //         'name' => 'content_separator',
-    //         'type' => 'custom_html',
-    //         'value' => '<br><h2>' . 'Page Content' . '</h2><hr>',
-    //     ]);
-    //     $this->crud->addField([
-    //         'name' => 'content',
-    //         'label' => trans('backpack::pagemanager.content'),
-    //         'type' => 'wysiwyg',
-    //         'placeholder' => trans('backpack::pagemanager.content_placeholder'),
-    //     ]);
-    // }
+    private function Content()
+    {
+        $this->crud->addField([   // CustomHTML
+            'name' => 'content_separator',
+            'type' => 'custom_html',
+            'value' => '<br><h2>' . 'Page Content' . '</h2><hr>',
+        ]);
+        $this->crud->addField([
+            'name' => 'content',
+            'label' => trans('backpack::pagemanager.content'),
+            'type' => 'wysiwyg',
+            'placeholder' => trans('backpack::pagemanager.content_placeholder'),
+        ]);
+    }
 
     // private function services()
     // {

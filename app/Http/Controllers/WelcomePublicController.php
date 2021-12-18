@@ -52,8 +52,33 @@ class WelcomePublicController extends Controller
             'audit_assurance_and_certification' => $audit_assurance_and_certification,
             'appearance_and_representation' => $appearance_and_representation
         ];
+        $team_1 = Page::where([
+            ['name', '=', 'TEAM'],
+            ['slug', '=', 'team-1'],
+        ])->get(['title', 'content']);
+
+        $team_2 = Page::where([
+            ['name', '=', 'TEAM'],
+            ['slug', '=', 'team-2'],
+        ])->get(['title', 'content']);
+
+        $team_3 = Page::where([
+            ['name', '=', 'TEAM'],
+            ['slug', '=', 'team-3'],
+        ])->get(['title', 'content']);
+
+        $team_4 = Page::where([
+            ['name', '=', 'TEAM'],
+            ['slug', '=', 'team-4'],
+        ])->get(['title', 'content']);
+        $team = [
+            'team_1' => $team_1,
+            'team_2' => $team_2,
+            'team_3' => $team_3,
+            'team_4' => $team_4,
+        ];
         $social = Page::where('name', 'SOCIAL')->get(['title', 'content']);
-        return view('welcome')->with(compact('aboutus','services','social'));
+        return view('welcome')->with(compact('aboutus','services','social','team'));
     }
 
     /**

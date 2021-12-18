@@ -18,7 +18,7 @@
                     <img src="themes/public/img/team/mpvijayakumar.png" class="img-fluid" alt="">
                     <div class="member-info" onclick="info('#memberone')">
                         <div class="member-info-content">
-                            <h4>M P Vijayakumar</h4>
+                            <h4>{!!@$team['team_1'][0]['title']!!}</h4>
                             <span>(B.Com, ACS)</span>
                             {{-- <div class="social">
                                 <a href=""><i class="bi bi-twitter"></i></a>
@@ -36,7 +36,7 @@
                     <img src="themes/public/img/team/sreeraj.jpg" class="img-fluid" alt="">
                     <div class="member-info" onclick="info('#membertwo')">
                         <div class="member-info-content">
-                            <h4>Sreeraj Muralidharan</h4>
+                            <h4>{!!@$team['team_2'][0]['title']!!}</h4>
                             <span>(BBM, FCS)</span>
                             {{-- <div class="social">
                                 <a href=""><i class="bi bi-twitter"></i></a>
@@ -54,7 +54,7 @@
                     <img src="themes/public/img/team/joseprakash.png" class="img-fluid" alt="">
                     <div class="member-info" onclick="info('#memberthree')">
                         <div class="member-info-content">
-                            <h4>Jose Prakash</h4>
+                            <h4>{!!@$team['team_3'][0]['title']!!}</h4>
                             <span>(B.Com, LLB, ACS, MBA)</span>
                             {{-- <div class="social">
                                 <a href=""><i class="bi bi-twitter"></i></a>
@@ -72,7 +72,7 @@
                     <img src="themes/public/img/team/priyanka.jpg" class="img-fluid" alt="">
                     <div class="member-info" onclick="info('#memberfour')">
                         <div class="member-info-content">
-                            <h4>PRIYANKA CHOUBEY </h4>
+                            <h4>{!!@$team['team_4'][0]['title']!!}</h4>
                             <span>ACS, LLB (HONS.), B.COM (HONS.)
                             </span>
                             {{-- <div class="social">

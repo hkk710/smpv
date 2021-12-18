@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Backpack\PageManager\app\Models\Page;
 
 class StatutoryResourceController extends Controller
 {
@@ -13,7 +14,8 @@ class StatutoryResourceController extends Controller
      */
     public function index()
     {
-        return view('statutory.index');
+        $statutes = Page::where('template', 'Statute')->get(['id', 'title', 'content']);
+        return view('statutory.index')->with(compact('statutes'));
     }
 
     /**
@@ -45,7 +47,8 @@ class StatutoryResourceController extends Controller
      */
     public function show($id)
     {
-        //
+        $statute = Page::find($id);
+        return view('statutory.show')->with(compact('statute'));
     }
 
     /**

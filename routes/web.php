@@ -27,8 +27,16 @@ Route::get('/test1', function () {
     return view('admin.test1.index');
 });
 
-// Route::group(['namespace' => '','middleware' => ['web', config('backpack.base.middleware_key', 'admin')],'prefix' => config('backpack.base.route_prefix', 'admin'),]
+// Route::group([
+//     'namespace' => '',
+//     'middleware' => ['web', config('backpack.base.middleware_key', 'admin')],
+//     'prefix' => config('backpack.base.route_prefix', 'admin'),
+//     ]
+    
+    
 // );
+
+Route::get('/{slug}', [WelcomePublicController::class, 'show']);
 Route::resources([
     'career' => CareerResourceController::class,
     'article' => ArticleResourceController::class,

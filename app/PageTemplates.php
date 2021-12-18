@@ -20,23 +20,23 @@ trait PageTemplates
     | - page slug
     */
 
-    private function Content()
-    {
-        $this->crud->addField([   // CustomHTML
-            'name' => 'content_separator',
-            'type' => 'custom_html',
-            'value' => '<br><h2>' . 'Page Content' . '</h2><hr>',
-        ]);
-        $this->crud->addField([
-            'name' => 'content',
-            'label' => trans('backpack::pagemanager.content'),
-            'type' => 'wysiwyg',
-            'placeholder' => trans('backpack::pagemanager.content_placeholder'),
-        ]);
-    }
+    // private function Content()
+    // {
+    //     $this->crud->addField([   // CustomHTML
+    //         'name' => 'content_separator',
+    //         'type' => 'custom_html',
+    //         'value' => '<br><h2>' . 'Page Content' . '</h2><hr>',
+    //     ]);
+    //     $this->crud->addField([
+    //         'name' => 'content',
+    //         'label' => trans('backpack::pagemanager.content'),
+    //         'type' => 'wysiwyg',
+    //         'placeholder' => trans('backpack::pagemanager.content_placeholder'),
+    //     ]);
+    // }
 
-    private function services()
-    {
+    // private function services()
+    // {
         // $this->crud->addField([   // CustomHTML
         //     'name' => 'metas_separator',
         //     'type' => 'custom_html',
@@ -72,21 +72,43 @@ trait PageTemplates
         //     'type' => 'wysiwyg',
         //     'placeholder' => trans('backpack::pagemanager.content_placeholder'),
         // ]);
-    }
+    // }
 
-    private function team()
-    {
-    }
-    private function team_member()
-    {
-    }
-    private function blog()
-    {
-    }
+    // private function team()
+    // {
+    // }
+    // private function team_member()
+    // {
+    // }
+    // private function blog()
+    // {
+    // }
     private function articles()
     {
+        $this->crud->addField([   // CustomHTML
+            'name' => 'content_separator',
+            'type' => 'custom_html',
+            'value' => '<br><h2>' . 'Article Content' . '</h2><hr>',
+        ]);
+        $this->crud->addField([
+            'name' => 'content',
+            'label' => trans('backpack::pagemanager.content'),
+            'type' => 'wysiwyg',
+            'placeholder' => trans('backpack::pagemanager.content_placeholder'),
+        ]);
     }
-    private function statutory_updates()
+    private function statutory()
     {
+        $this->crud->addField([   // CustomHTML
+            'name' => 'content_separator',
+            'type' => 'custom_html',
+            'value' => '<br><h2>' . 'Statutory Content' . '</h2><hr>',
+        ]);
+        $this->crud->addField([
+            'name' => 'content',
+            'label' => trans('backpack::pagemanager.content'),
+            'type' => 'wysiwyg',
+            'placeholder' => trans('backpack::pagemanager.content_placeholder'),
+        ]);
     }
 }

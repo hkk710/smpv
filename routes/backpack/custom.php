@@ -1,5 +1,4 @@
 <?php
-
 // --------------------------
 // Custom Backpack Routes
 // --------------------------
@@ -14,4 +13,6 @@ Route::group([
     ),
     'namespace'  => 'App\Http\Controllers\Admin',
 ], function () { // custom admin routes
+    Route::get('/article', 'ArticleAdminController@index');
+    Route::get('/article/create', 'ArticleAdminController@create');
 }); // this should be the absolute last line of this file

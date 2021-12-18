@@ -84,9 +84,11 @@ class WelcomePublicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $content = Page::where('slug', $slug)->get();
+        $content = $content[0];
+        return view('show')->with(compact('content'));
     }
 
     /**

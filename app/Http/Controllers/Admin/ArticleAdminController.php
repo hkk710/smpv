@@ -1,21 +1,28 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use Backpack\PageManager\app\Models\Page;
-use Illuminate\Support\Facades\Auth;
-class ArticleResourceController extends Controller
+
+class ArticleAdminController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function setup()
+    {
+        $this->crud->setModel(config('backpack.pagemanager.page_model_class', 'Backpack\PageManager\app\Models\Page'));
+        $this->crud->setRoute(config('backpack.base.route_prefix').'/page');
+        $this->crud->setEntityNameStrings(trans('backpack::pagemanager.page'), trans('backpack::pagemanager.pages'));
+    }
     public function index()
     {
-        $articles = Page::where('template', 'Articles')->get(['id', 'title', 'content']);
-        return view('article.index')->with(compact('articles'));
+        $articles = Page::where('name', 'Article')->get(['id', 'title', 'content']);
+        return view('admin.article.index')->with(compact('articles'));
     }
 
     /**
@@ -25,7 +32,8 @@ class ArticleResourceController extends Controller
      */
     public function create()
     {
-       dd("it works!");
+        $articles = Page::where('name', 'Article')->get(['id', 'title', 'content']);
+        return view('admin.article.index')->with(compact('articles'));
     }
 
     /**
@@ -50,7 +58,6 @@ class ArticleResourceController extends Controller
         $article = Page::find($id);
         return view('article.show')->with(compact('article'));
     }
-
 
     /**
      * Show the form for editing the specified resource.

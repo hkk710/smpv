@@ -16,7 +16,7 @@
             </div>
 
             <div class="col-lg-2 col-md-4 col-4 d-flex align-items-right justify-content-center">
-                <a href="pdf/smpv.pdf" download>
+                <a href="/pdf/smpv.pdf" download>
                     <img src="themes/public/img/clients/client-7.png" class="img-fluid" alt="pdf">
                 </a>
             </div>

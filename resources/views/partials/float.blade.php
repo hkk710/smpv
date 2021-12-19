@@ -217,7 +217,7 @@
                 <i class="fa fa-rss my-float"></i>
             </a>
         </li>
-        <li><a href="/pdf/smpv.pdf" download>
+        <li><a href="https://drive.google.com/file/d/1erMOwssxLMJAdZdCX52H5Hbav56uwVqs/view?usp=sharing" target="_blank">
                 <i class="fa fa-file my-float"></i>
             </a>
         </li>

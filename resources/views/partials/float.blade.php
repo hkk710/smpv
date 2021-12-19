@@ -221,8 +221,8 @@
                 <i class="fa fa-file my-float"></i>
             </a>
         </li>
-        <li><a onclick="loadmodal('#feedback')">
-                <i class="fa fa-commenting my-float" style="color:#fff"></i>
+        <li><a a href="#" onclick="loadmodal('#feedback')">
+                <i class="fa fa-phone my-float" style="color:#fff"></i>
             </a>
         </li>
 

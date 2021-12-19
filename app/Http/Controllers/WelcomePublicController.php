@@ -148,4 +148,21 @@ class WelcomePublicController extends Controller
     {
         //
     }
+
+    public function callback(Request $request) 
+    { 
+        $applicantDetails = $request->all();
+        $name = $applicantDetails['name'];
+        $email = $applicantDetails['email'];
+        $mobile = $applicantDetails['mobile'];
+        $service = $applicantDetails['service'];
+        $city = $applicantDetails['city'];
+
+        \Mail::send('partials.callback.email', ['name' => $name,  'email' => $email, 'mobile' => $mobile, 'service' => $service, 'city' => $city], function ($message) {
+
+            $message->to('hkk710@gmail.com')->subject('Application');
+        });
+
+        return back()->with('success', 'Your application sent successfully!');
+    }
 }

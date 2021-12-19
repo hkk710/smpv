@@ -35,37 +35,21 @@ class CareerResourceController extends Controller
      */
     public function store(Request $request)
     {
-        // dd("here");
         $applicantDetails = $request->all();
-        // if ($file = $request->file('file')) {
-            // if ($file->move('pdf', $applicantDetails['email'] . 'pdf')) {
-            //     $career = new Career();
-            //     $career->name = $applicantDetails['name'];
-            //     $career->education = $applicantDetails['education'];
-            //     $career->email = $applicantDetails['email'];
-            //     $career->mobile = $applicantDetails['mobile'];
-            //     $career->description = $applicantDetails['description'];
-                // $career->resume_path = $applicantDetails['email'] . 'pdf';
-                // $career->save();
+        $name = $applicantDetails['name'];
+        $education = $applicantDetails['education'];
+        $email = $applicantDetails['email'];
+        $mobile = $applicantDetails['mobile'];
+        $description = $applicantDetails['description'];
+        $file = $request->file('file');
 
-                $name = $applicantDetails['name'];
-                $education = $applicantDetails['education'];
-                $email = $applicantDetails['email'];
-                $mobile = $applicantDetails['mobile'];
-                $description = $applicantDetails['description'];
-                $file = $request->file('file');       
-            
-                    \Mail::send('partials.career.email', ['name' => $name, 'education' => $education, 'email' => $email, 'mobile' => $mobile, 'description' => $description], function ($message) use($file){
-            
-                        $message->to('hkk710@gmail.com')->subject('Application')
-                        ->attach($file->getRealPath(),['as' => $file->getClientOriginalName(),'mime' => $file->getClientMimeType()]);
-                            
-                    });
-                        
-                return back()->with('success', 'Your application sent successfully!');
-        //     };
-        // }
-        return back();
+        \Mail::send('partials.career.email', ['name' => $name, 'education' => $education, 'email' => $email, 'mobile' => $mobile, 'description' => $description], function ($message) use ($file) {
+
+            $message->to('hkk710@gmail.com')->subject('Application')
+                ->attach($file->getRealPath(), ['as' => $file->getClientOriginalName(), 'mime' => $file->getClientMimeType()]);
+        });
+
+        return back()->with('success', 'Your application sent successfully!');
     }
 
     /**

@@ -43,6 +43,7 @@ Route::resources([
     'statutory' => StatutoryResourceController::class,
 ]);
 Route::get('/{slug}', [WelcomePublicController::class, 'show']);
+Route::post('/callback', [WelcomePublicController::class, 'callback']);
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //     return view('admin/dashboard/index');
 // })->name('dashboard');

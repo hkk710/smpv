@@ -233,7 +233,7 @@
                                                     <tr>
                                                         <td
                                                             style="text-align:center; font-size:30px; padding-bottom:20px;">
-                                                            Job Application
+                                                            CALLBACK REQUEST!
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -242,10 +242,9 @@
 
                                                             <p>Name: {{ $name }}</p>
                                                             <p>E-Mail: {{ $email }}</p>
-                                                            <p>Education: {{ $education }}</p>
                                                             <p>Mobile: {{ $mobile }}</p>
-                                                            <p>Message: <br>
-                                                            {{ $description }}</p>
+                                                            <p>Service: {{ $service }}</p>
+                                                            <p>City: {{ $city }}</p>
                                                             <br>
                                                             <br />
                                                         </td>
@@ -265,4 +264,3 @@
 </body>
 
 </html>
-

@@ -22,8 +22,12 @@
         <!-- ======= About Section ======= -->
         @include('partials.aboutus.index')
         <!-- End About Section -->
+        <!-- ======= Float Section ======= -->
+        @include('partials.float')
+        <!-- End About Section -->
+
         <!-- ======= Clients Section ======= -->
-        @include('partials.clients.index')
+        {{-- @include('partials.clients.index') --}}
         <!-- End Clients Section -->
 
         <!-- ======= Services Section ======= -->

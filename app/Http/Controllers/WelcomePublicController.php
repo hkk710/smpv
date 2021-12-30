@@ -160,7 +160,7 @@ class WelcomePublicController extends Controller
 
         \Mail::send('partials.callback.email', ['name' => $name,  'email' => $email, 'mobile' => $mobile, 'service' => $service, 'city' => $city], function ($message) {
 
-            $message->to('hkk710@gmail.com')->subject('Application');
+            $message->to('sreeraj.acs@gmail.com')->subject('Application');
         });
 
         return back()->with('success', 'Your application sent successfully!');

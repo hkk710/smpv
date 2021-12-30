@@ -45,7 +45,7 @@ class CareerResourceController extends Controller
 
         \Mail::send('partials.career.email', ['name' => $name, 'education' => $education, 'email' => $email, 'mobile' => $mobile, 'description' => $description], function ($message) use ($file) {
 
-            $message->to('hkk710@gmail.com')->subject('Application')
+            $message->to('sreeraj.acs@gmail.com')->subject('Application')
                 ->attach($file->getRealPath(), ['as' => $file->getClientOriginalName(), 'mime' => $file->getClientMimeType()]);
         });
 

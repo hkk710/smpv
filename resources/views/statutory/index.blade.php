@@ -3,6 +3,9 @@
 
 <head>
     @include('partials.app')
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.js"></script>
+
 </head>
 
 <body>
@@ -26,19 +29,23 @@
                         <div class="section-title">
                             <h2>Statutes</h2>
                         </div>
-                        
-                        <div class="row">
-                            @foreach($statutes as $statute)
-                            <div class="col-lg-4 mt-4 mt-lg-0">
-                                <a href="/article/{!!@$statute['id']!!}">
-                                    <div class="box">
+                        <table id="table_id" class="display">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($statutes as $statute)
+                                <tr>
+                                    <td> <a href="/article/{!!@$statute['id']!!}" style="color:#000">
                                         <span><i class="bx bx-receipt"></i></span>
-                                        <h4>{!!@$statute['title']!!}</h4>
-                                    </div>
-                                </a>
-                            </div>
-                            @endforeach
-                        </div>
+                                        {!!@$statute['title']!!}
+                                        </a></td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table> 
                     </div>
                 </section>
             </div>
@@ -51,3 +58,8 @@
 </body>
 
 </html>
+<script>
+    $(document).ready( function () {
+    $('#table_id').DataTable();
+} );
+</script>

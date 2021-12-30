@@ -8,7 +8,7 @@
                 <div class="contact-address">
                     <i class="bi bi-geo-alt-fill"></i>
                     <h3>Bengaluru Office</h3>
-                    <address>No.106, 04th Cross, 02nd Block, Koramangala, Bengaluru – 560034, Karnataka, India
+                    <address>No.106, 04th Cross, 02nd Block, Koramangala, Bengaluru – 560034, Karnataka, India, Mob: 9663668920
                     </address>
                 </div>
             </div>

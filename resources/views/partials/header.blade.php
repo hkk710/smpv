@@ -14,7 +14,7 @@
                 {{-- <li><a class="nav-link scrollto" href="#faq">Associates</a></li> --}}
                 <li class="dropdown"><a href="#insights"><span>Insights</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="https://sreerajm.blog/blog-2/"  target="_blank">Blog</a></li>
                         <li><a href="/article">Articles</a></li>
                         <li><a href="/statutory">Statutory Updates</a></li>
                     </ul>

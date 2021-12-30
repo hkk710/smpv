@@ -5,7 +5,7 @@
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <a href="/blog">
+                <a href="https://sreerajm.blog/blog-2/"  target="_blank">
                     <div class="box">
                         <span><i class="bx bxl-blogger"></i></span>
                         <h4>Blog</h4>

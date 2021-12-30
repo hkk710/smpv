@@ -213,7 +213,7 @@
                 <i class="fa fa-twitter my-float"></i>
             </a>
         </li>
-        <li><a href="/blog" target="_blank">
+        <li><a href="https://sreerajm.blog/blog-2/" target="_blank">
                 <i class="fa fa-rss my-float"></i>
             </a>
         </li>

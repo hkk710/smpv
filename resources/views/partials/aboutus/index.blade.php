@@ -4,6 +4,10 @@
         cursor: pointer;
         text-decoration: underline
     }
+    .commitment ul {
+        margin-left:45px;
+    }
+
 </style>
 <section id="about" class="about">
     <div class="container">
@@ -15,10 +19,11 @@
                 <div class="content d-flex flex-column justify-content-center">
                     {!!@$aboutus[0]['content']!!}
                     <div class="row">
-                        <div class="col-md-12 icon-box">
+                        <div class="col-md-12 icon-box commitment">
                             <i class="bx bx-receipt"></i>
                             <h4>Our Commitment</h4>
                             {!!@$aboutus[2]['content']!!}
+
                         </div>
                         <div class="col-md-12 icon-box">
                             <i class="bx bx-images"></i>

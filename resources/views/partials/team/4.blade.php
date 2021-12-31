@@ -8,12 +8,12 @@
             </div>
             <div class="modal-body" style="padding: 5% 5% 5% 5%;font-family:sans-serif;text-align:Justify; ">
                 <div class="col-lg-12 col-md-12 icon-box">
-                    <h4 class="title">{!!@$team['team_3'][0]['title']!!}</h4>
+                    <h4 class="title">{!!@$team['team_4'][0]['title']!!}</h4>
                     <h6 class="title">ACS, LLB (HONS.), B.COM (HONS.)</h6>
                     <img src="themes/public/img/team/priyanka.jpg" class="img-fluid" style="border-radius: 8px;"
                         width="300" height="300">
                     <div class="description" style="padding-top:2%">
-                        {!!@$team['team_3'][0]['content']!!}
+                        {!!@$team['team_4'][0]['content']!!}
                     </div>
                 </div>
             </div>

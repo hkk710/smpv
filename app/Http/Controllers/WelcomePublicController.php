@@ -111,7 +111,7 @@ class WelcomePublicController extends Controller
     public function show($slug)
     {
         $content = Page::where('slug', $slug)->get();
-        $content = $content[0];
+        $content = @$content[0];
         return view('show')->with(compact('content'));
     }
 
